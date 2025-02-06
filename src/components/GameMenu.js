@@ -10,25 +10,25 @@ const GameMenu = ({ startGame, resetGame, checkGame, quitGame }) => {
           onClick={startGame}
           className="game-menu__button game-menu__button--start"
         >
-          Start Game
+          Start New Game
         </button>
         <button
           onClick={resetGame}
           className="game-menu__button game-menu__button--reset"
         >
-          Reset Game
+          Resume Game
         </button>
         <button
           onClick={checkGame}
           className="game-menu__button game-menu__button--check"
         >
-          Check Game
+          Lead Board
         </button>
         <button
           onClick={quitGame}
           className="game-menu__button game-menu__button--quit"
         >
-          Quit Game
+          Quit
         </button>
       </div>
     </div>

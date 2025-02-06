@@ -19,13 +19,13 @@
     height: 50px;
     border: 1px solid black;
     &:hover {
-      background-color: #f0f0f0;
+      background-color: #888787;
       cursor: pointer;
     }
   }
   .cell-Solved,
   .cell-Selected {
-    background-color: #f0f0f0;
+    background-color: #888787;
   }
   .cell-Error {
     background-color: #ffcccc;

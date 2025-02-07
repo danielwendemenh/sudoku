@@ -101,8 +101,12 @@ const GameBoard = ({
               onClick={() => handleCellClick(cellIndex, rowIndex)}
               key={cellIndex}
               className={`cell ${
-                selectedCell?.rowIndex === rowIndex &&
-                selectedCell?.cellIndex === cellIndex
+                (selectedCell?.rowIndex === rowIndex &&
+                  selectedCell?.cellIndex === cellIndex) ||
+                (row[cellIndex] ===
+                  board?.[selectedCell?.rowIndex]?.[selectedCell?.cellIndex] &&
+                  board?.[selectedCell?.rowIndex]?.[selectedCell?.cellIndex] !==
+                    0)
                   ? "cell-Selected"
                   : ""
               }`}

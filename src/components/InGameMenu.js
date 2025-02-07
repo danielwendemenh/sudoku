@@ -22,7 +22,6 @@ const InGameMenu = ({ resetGame, checkGame, quitGame }) => {
         <button
           onClick={(e) => {
             e.preventDefault();
-            console.log("Pause");
             setIsPaused((prev) => !prev);
           }}
           className="game-menu__button game-menu__button--start"
@@ -30,7 +29,11 @@ const InGameMenu = ({ resetGame, checkGame, quitGame }) => {
           {isPaused ? "Resume" : "Pause"}
         </button>
         <button
-          onClick={resetGame}
+          onClick={(e) => {
+            e.preventDefault();
+            setTimer(0);
+            resetGame();
+          }}
           className="game-menu__button game-menu__button--reset"
         >
           Reset

@@ -1,7 +1,7 @@
 import React from "react";
 import "./GameMenu.scss";
 
-const GameMenu = ({ startGame, resetGame, checkGame, quitGame }) => {
+const GameMenu = ({ startGame, resume, quitGame }) => {
   return (
     <div className="game-menu">
       <h1 className="game-menu__title">Sudoku</h1>
@@ -13,17 +13,12 @@ const GameMenu = ({ startGame, resetGame, checkGame, quitGame }) => {
           Start New Game
         </button>
         <button
-          onClick={resetGame}
+          onClick={resume}
           className="game-menu__button game-menu__button--reset"
         >
           Resume Game
         </button>
-        <button
-          onClick={checkGame}
-          className="game-menu__button game-menu__button--check"
-        >
-          Lead Board
-        </button>
+
         <button
           onClick={quitGame}
           className="game-menu__button game-menu__button--quit"
